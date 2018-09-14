@@ -10,7 +10,7 @@
             <p class="card-text">{{movie.movieSynopsis}}</p>
               <hr class="my-3 bg-dark">
             <div class="card-body row">
-              <a href="#" class="btn btn-block btn-dark">Update</a>
+              <a [routerLink]="['/movies', movie.movieId]" class="btn btn-block btn-dark">Update</a>
               <a href="#" class="btn btn-block btn-danger">Delete</a>
             </div>
           </div>
