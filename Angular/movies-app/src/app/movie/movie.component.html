@@ -3,11 +3,11 @@
 
 
         <div class="card border-dark col-3 my-4 mx-4"  *ngFor = "let movie of movies">
+          <h5 class="card-header bg-primary mt-3 text-white">
+             {{movie.movieName}}
+          </h5>
           <div class="card-body">
-            <div class="card-header">
-               {{movie.movieName}}
-            </div>
-            <h6 class="card-title mt-3 text-muted">Years: {{movie.movieName}}</h6>
+            <h6 class="card-title mt-3 text-muted">Year: {{movie.movieYear}}</h6>
             <p class="card-text">{{movie.movieSynopsis}}</p>
             <a href="#" class="card-link">Update</a>
             <a href="#" class="card-link">Delete</a>
