@@ -13,6 +13,7 @@ export class MovieService {
   movieUrl = 'http://localhost:8080/MoviesAppRest/api/movie/list_movies';
   postMovieUrl = 'http://localhost:8080/MoviesAppRest/api/movie/create_movie';
   updateMovieUrl = 'http://localhost:8080/MoviesAppRest/api/movie/update_movie/';
+  movieById = 'http://localhost:8080/MoviesAppRest/api/movie/movie_id/';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -33,6 +34,11 @@ export class MovieService {
   // update movie
   updateMovie(id, movie: Movie): Observable<Movie> {
     return this.client.put<Movie>(this.updateMovieUrl + id, movie, this.httpOptions);
+  }
+
+  // get movie by id
+  getMovieById(id): Observable<Movie> {
+    return this.client.get<Movie>(this.movieById + id);
   }
 
 }
