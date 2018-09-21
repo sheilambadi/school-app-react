@@ -11,8 +11,7 @@ class App extends Component {
       React.Fragment >
       <
       Navbar / >
-      <
-      GetStudent / >
+
       <
       /React.Fragment>
     );
