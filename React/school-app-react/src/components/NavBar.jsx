@@ -10,9 +10,10 @@ const Navbar = props => {
     <Router>
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="">
-            Navbar
-          </a>
+          <Link to="/" className="navbar-brand">
+            School App
+          </Link>
+
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
