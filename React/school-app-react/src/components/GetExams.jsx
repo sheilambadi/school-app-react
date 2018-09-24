@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Exam from "./Exam";
-import PostExams from "./PostExams";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class GetExams extends Component {
   state = {
@@ -11,14 +10,11 @@ class GetExams extends Component {
   render() {
     return (
       <div>
-        {/* <Router>
-          <ul>
-            <li>
-              <Link to="/results">Add Exams</Link>
-            </li>
-          </ul>
-        </Router> */}
-        <PostExams />
+        <div className="container mt-3">
+          <Link to="/newExams">
+            <button className="btn-primary">Post Exams</button>
+          </Link>
+        </div>
         <Exam exams={this.state.exams} />
       </div>
     );

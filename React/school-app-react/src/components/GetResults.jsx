@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Results from "./Results";
-import PostResults from "./PostResults";
+import { Link } from "react-router-dom";
 
 class GetResults extends Component {
   state = {
@@ -10,7 +10,11 @@ class GetResults extends Component {
   render() {
     return (
       <div>
-        <PostResults />
+        <div className="container mt-3">
+          <Link to="/newExams">
+            <button className="btn-primary">Post Exams</button>
+          </Link>
+        </div>
         <Results results={this.state.results} />;
       </div>
     );
