@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Results from "./Results";
+import PostResults from "./PostResults";
 
 class GetResults extends Component {
   state = {
     results: []
   };
   render() {
-    return <Results results={this.state.results} />;
+    return (
+      <div>
+        <PostResults />
+        <Results results={this.state.results} />;
+      </div>
+    );
   }
 
   componentDidMount() {

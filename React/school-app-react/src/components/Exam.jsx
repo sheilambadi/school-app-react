@@ -8,7 +8,9 @@ class Exam extends Component {
         <div className="d-flex justify-content-center">
           <table className="table table-bordered table-hover">
             <thead className="thead-dark">
-              <th>Exam Name</th>
+              <tr>
+                <th>Exam Name</th>
+              </tr>
             </thead>
             <tbody>
               {this.props.exams.map(exam => (

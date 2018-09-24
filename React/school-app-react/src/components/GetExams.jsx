@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Exam from "./Exam";
+import PostExams from "./PostExams";
 
 class GetExams extends Component {
   state = {
     exams: []
   };
   render() {
-    return <Exam exams={this.state.exams} />;
+    return (
+      <div>
+        <PostExams />
+        <Exam exams={this.state.exams} />
+      </div>
+    );
   }
 
   componentDidMount() {
@@ -16,7 +22,7 @@ class GetExams extends Component {
       .then(res => {
         const exams = res.data;
         this.setState({ exams });
-        console.log(exams);
+        // console.log(exams);
       });
   }
 }
