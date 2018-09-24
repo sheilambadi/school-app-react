@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Student from "./Student";
+import { Link } from "react-router-dom";
 
 class GetStudent extends Component {
   state = { students: [] };
@@ -8,7 +9,9 @@ class GetStudent extends Component {
     return (
       <div>
         <div className="container mt-3">
-          <button className="btn-primary">Post Students</button>
+          <Link to="/newStudents">
+            <button className="btn-primary">Post Students</button>
+          </Link>
         </div>
         <Student key={this.state.students.id} students={this.state.students} />
       </div>

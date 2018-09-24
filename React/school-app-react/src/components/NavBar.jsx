@@ -39,7 +39,11 @@ const Navbar = props => {
           </div>
         </nav>
 
-        <Route name="studentResult" path="/:id" component={ChartsTest} />
+        <Route
+          name="studentResult"
+          path="/studentResults/:id"
+          component={ChartsTest}
+        />
         <Route path="/newStudents" component={PostStudents} />
         <Route exact path="/" component={GetStudent} />
         <Route path="/newExams" component={PostExams} />
