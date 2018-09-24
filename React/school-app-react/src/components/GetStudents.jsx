@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Student from "./Student";
+import PostStudents from "./PostStudents";
 
 class GetStudent extends Component {
   state = { students: [] };
   render() {
     return (
-      <Student key={this.state.students.id} students={this.state.students} />
+      <div>
+        <PostStudents />
+        <Student key={this.state.students.id} students={this.state.students} />
+      </div>
     );
   }
 
