@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import GetStudent from "./GetStudents";
 import GetExams from "./GetExams";
 import GetResults from "./GetResults";
+import PostExams from "./PostExams";
 // Stateless Functional Component
 
 const Navbar = props => {
@@ -36,6 +37,7 @@ const Navbar = props => {
         </nav>
 
         <Route exact path="/" component={GetStudent} />
+        <Route path="/exams/new" component={PostExams} />
         <Route path="/exams" component={GetExams} />
         <Route path="/results" component={GetResults} />
       </div>

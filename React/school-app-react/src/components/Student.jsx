@@ -12,6 +12,7 @@ class Student extends Component {
                 <th>Adm No</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Analyze results</th>
               </tr>
             </thead>
             <tbody>
@@ -20,6 +21,9 @@ class Student extends Component {
                   <td>{student.admNo}</td>
                   <td>{student.firstName}</td>
                   <td>{student.lastName}</td>
+                  <td>
+                    <button className="btn btn-primary">Analyze Results</button>
+                  </td>
                 </tr>
               ))}
             </tbody>

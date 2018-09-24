@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import Student from "./Student";
 import PostStudents from "./PostStudents";
+import ChartsTest from "./ChartsTest";
 
 class GetStudent extends Component {
   state = { students: [] };
   render() {
     return (
       <div>
+        <ChartsTest />
         <PostStudents />
         <Student key={this.state.students.id} students={this.state.students} />
       </div>
