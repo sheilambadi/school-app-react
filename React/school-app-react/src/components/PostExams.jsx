@@ -62,6 +62,7 @@ class PostExams extends Component {
             </DragDropFile>
           </div>
         </div>
+
         <div className="card mt-3">
           <div className="card-body">
             <form onSubmit={this.handlePost}>
@@ -75,27 +76,6 @@ class PostExams extends Component {
                 />
               </div>
               <button className="btn btn-primary">Add Exam</button>
-
-              <div className="table-responsive">
-                <table className="table table-striped">
-                  <thead>
-                    <tr>
-                      {this.state.cols.map(c => (
-                        <th key={c.key}>{c.name}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.state.data.map((r, i) => (
-                      <tr key={i}>
-                        {this.state.cols.map(c => (
-                          <td key={c.key}>{r[c.key]}</td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
             </form>
           </div>
         </div>
