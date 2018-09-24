@@ -6,6 +6,7 @@ import GetResults from "./GetResults";
 import PostExams from "./PostExams";
 import PostStudents from "./PostStudents";
 import PostResults from "./PostResults";
+import ChartsTest from "./ChartsTest";
 // Stateless Functional Component
 
 const Navbar = props => {
@@ -38,6 +39,7 @@ const Navbar = props => {
           </div>
         </nav>
 
+        <Route name="studentResult" path="/:id" component={ChartsTest} />
         <Route path="/newStudents" component={PostStudents} />
         <Route exact path="/" component={GetStudent} />
         <Route path="/newExams" component={PostExams} />

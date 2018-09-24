@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Student extends Component {
   state = {};
@@ -22,7 +23,11 @@ class Student extends Component {
                   <td>{student.firstName}</td>
                   <td>{student.lastName}</td>
                   <td>
-                    <button className="btn btn-primary">Analyze Results</button>
+                    <Link to="studentResult" params={{ id: 1 }}>
+                      <button className="btn btn-primary">
+                        Analyze Results
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               ))}
