@@ -238,7 +238,7 @@ class OutTable extends React.Component {
 }
 
 /* list of supported file types */
-const SheetJSFT = ["xlsx", "xlsb", "xlsm", "xls"]
+const SheetJSFT = ["xlsx", "xlsb", "xlsm", "xls", "csv"]
   .map(function(x) {
     return "." + x;
   })
